@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Фунт стерлингов Соединенного королевства"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/char_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="GBP"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toTopOf="@id/name"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/nominal_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nominal_string"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintBottom_toBottomOf="@id/nominal"/>
+
+        <EditText
+            android:id="@+id/nominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintStart_toEndOf="@id/nominal_text_view"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            tools:text="1"/>
+
+        <TextView
+            android:id="@+id/value_in_rub_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рубли:"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/nominal"
+            app:layout_constraintTop_toTopOf="@id/nominal"
+            app:layout_constraintBottom_toBottomOf="@id/nominal"/>
+
+        <EditText
+            android:id="@+id/value_in_rub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:text="145.7631"
+            android:imeOptions="actionDone"
+            app:layout_constraintStart_toEndOf="@id/value_in_rub_text_view"
+            app:layout_constraintTop_toTopOf="@id/value_in_rub_text_view"
+            app:layout_constraintBottom_toBottomOf="@id/value_in_rub_text_view"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
